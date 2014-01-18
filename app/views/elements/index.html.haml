@@ -1,0 +1,18 @@
+%h1 Listing elements
+
+%table
+  %tr
+    %th CSS Element
+    %th Style
+
+  - @elements.each do |element|
+    %tr
+      %td= element.name
+      %td= element.style.blank? ? '- default -' : element.style.name
+      %td= link_to 'Show', element
+      %td= link_to 'Edit', edit_element_path(element)
+      %td= link_to 'Destroy', element, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Element', new_element_path

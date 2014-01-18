@@ -1,0 +1,14 @@
+%p#notice= notice
+
+%p
+  Element name: #{@element.name}
+
+%p
+  - if @element.style.blank?
+    Style: - default -
+  - else
+    Style: #{@element.style.name}
+
+= link_to 'Edit', edit_element_path(@element)
+\|
+= link_to 'Back', elements_path

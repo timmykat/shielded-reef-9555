@@ -1,0 +1,36 @@
+= form_for @style do |f|
+  - if @style.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@style.errors.count, "error")} prohibited this style from being saved:"
+      %ul
+        - @style.errors.full_messages.each do |msg|
+          %li= msg
+  .notice
+    Colors must be 6-digit hex, no hash tag.
+  .notice
+    Fonts should specify px or em immediately after the value
+  .notice
+    Border thickness should be specified in px, up to 99px
+  .field
+    = f.label :name
+    = f.text_field :name
+  .field
+    = f.label :font
+    = f.select :font, grouped_options_for_select(select_font_options, :selected => @style[:font], :prompt => "-Default font-")
+  .field
+    = f.label :font_size
+    = f.text_field :font_size
+  .field
+    = f.label :text_color
+    = f.text_field :text_color
+  .field
+    = f.label :background_color
+    = f.text_field :background_color
+  .field
+    = f.label :border_color
+    = f.text_field :border_color
+  .field
+    = f.label :border_thickness
+    = f.text_field :border_thickness
+  .actions
+    = f.submit 'Save'

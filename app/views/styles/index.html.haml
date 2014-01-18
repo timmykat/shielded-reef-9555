@@ -1,0 +1,31 @@
+%h1 Listing styles
+
+%table
+  %tr
+    %th Name
+    %th Font
+    %th Font size
+    %th Text color
+    %th Background color
+    %th Border color
+    %th Border thickness
+    %th
+    %th
+    %th
+
+  - @styles.each do |style|
+    %tr
+      %td= style.name
+      %td= style.font || '-'
+      %td= style.font_size
+      %td= style.text_color
+      %td= style.background_color
+      %td= style.border_color
+      %td= style.border_thickness
+      %td= link_to 'Show', style
+      %td= link_to 'Edit', edit_style_path(style)
+      %td= link_to 'Destroy', style, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Style', new_style_path

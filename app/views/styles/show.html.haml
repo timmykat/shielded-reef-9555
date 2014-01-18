@@ -1,0 +1,31 @@
+%p#notice= notice
+
+%h1= @style.name
+
+%p 
+  Font:
+  = @style.font || 'Default'
+
+%p
+  Font size:
+  = @style.font_size || 'Default'
+
+%p
+  Text color:
+  = @style.text_color || 'Default'
+
+%p
+  Background color:
+  = @style.background_color || 'Default'
+
+%p
+  Border color:
+  = @style.border_color || 'Default'
+
+%p 
+  Border thickness:
+  = @style.border_thickness || 'Default'
+
+= link_to 'Edit', edit_style_path(@style)
+\|
+= link_to 'Back', styles_path

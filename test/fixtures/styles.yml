@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: Style 1
+  font: Arial, sans-serif
+  font_size: 20px
+  text_color: bebebe
+  background_color: bebebe
+  border_color: bebebe
+  border_thickness: 2px
+
+two:
+  name: Style 2
+  font: Arial, sans-serif
+  font_size: 20px
+  text_color: bebebe
+  background_color: bebebe
+  border_color: bebebe
+  border_thickness: 

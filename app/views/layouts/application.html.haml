@@ -1,0 +1,56 @@
+!!!
+- page_path = request.path.gsub(/\//, '')
+/[if lt IE 7 ]
+  %html(class="ie ie6" lang="en")
+/[if IE 7 ]
+  %html(class="ie ie7" lang="en")
+/[if IE 8 ]
+  %html(class="ie ie8" lang="en")
+= surround '<!-- [if (gte IE 9)|!(IE)] -->'.html_safe, '<!-- <![endif]-->'.html_safe do
+  %html(lang="en")
+
+    %head
+      %title web development, book design, and photography by Tim Kinnel | words are images
+      = javascript_include_tag "application"
+      = stylesheet_link_tag "application", media: "all"  
+
+      /[if lt IE 9]
+        %script(src="http://html5shim.googlecode.com/svn/trunk/html5.js")
+
+      = csrf_meta_tag
+      %meta(charset="utf-8")
+      <!-- Mobile-Specific Metas -->
+      %meta(name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1")
+
+      <!-- Favicons -->
+      %link(rel="apple-touch-icon" href="images/apple-touch-icon.png")
+      %link(rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png")
+      %link(rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png")
+      
+      <!-- Custom style declarations -->
+      = custom_styles
+
+    %body{ :id => page_path }
+      .header
+        .container
+          .sixteen.columns
+            Bluetrain
+
+      .main      
+        .container
+          .sixteen.columns
+            = yield
+          
+      .footer
+        .container
+          .sixteen.columns
+            %ul.nav
+              %li
+                %a{:href => '/articles'} Articles
+              %li
+                %a{:href => '/elements'} Customize Elements
+              %li
+                %a{:href => '/styles'} Manage Styles
+            .copyright
+              &copy; #{Time.now.year} No-one
+
