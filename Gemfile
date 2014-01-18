@@ -46,4 +46,9 @@ gem 'paperclip'
 # Skeleton for responsive design layout
 gem 'skeleton-rails', :git => "https://github.com/timmykat/skeleton-rails"
 
+# Use unicorn on Heroku
+group :production do
+  gem 'unicorn'
+end
+
 
