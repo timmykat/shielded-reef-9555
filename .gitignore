@@ -20,3 +20,4 @@
 
 # Igmore project files
 *.bbprojectd
+.env

@@ -9,6 +9,9 @@ gem 'rails', '4.0.2'
 # Use postgres as the database for Active Record
 gem 'pg'
 
+# Use unicorn
+gem 'unicorn'
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
 
@@ -45,10 +48,4 @@ gem 'paperclip'
 
 # Skeleton for responsive design layout
 gem 'skeleton-rails', :git => "https://github.com/timmykat/skeleton-rails"
-
-# Use unicorn on Heroku
-group :production do
-  gem 'unicorn'
-end
-
 
