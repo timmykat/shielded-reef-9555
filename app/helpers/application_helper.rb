@@ -3,7 +3,7 @@ module ApplicationHelper
     output = "<style>\n"
     Element.all.each do |element|
       if element.style
-        output += "#{element.name} {\n"
+        output += "#{element.css_tag} {\n"
         output += element.style.font.blank? ? '' : "  font-family: #{element.style.font};\n"
         output += element.style.font_size.blank? ? '' : "  font-size: #{element.style.font_size};\n"
         output += element.style.text_color.blank? ? '' : "  color: ##{element.style.text_color};\n"

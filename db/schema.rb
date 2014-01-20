@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140117170034) do
+ActiveRecord::Schema.define(version: 20140120073936) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -32,6 +32,7 @@ ActiveRecord::Schema.define(version: 20140117170034) do
     t.integer  "style_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "css_tag"
   end
 
   create_table "styles", force: true do |t|

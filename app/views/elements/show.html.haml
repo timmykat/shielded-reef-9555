@@ -4,6 +4,8 @@
   Element name: #{@element.name}
 
 %p
+  CSS tag: #{@element.css_tag}
+%p
   - if @element.style.blank?
     Style: - default -
   - else

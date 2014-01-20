@@ -11,6 +11,10 @@
     = f.text_field :name
     
   .field
+    = f.label :css_tag
+    = f.text_field :css_tag
+
+  .field
     = f.label :style
     = f.select :style_id, options_for_select(select_style_options, :selected => @element[:style_id])
     = link_to 'New Style', '/styles/new'

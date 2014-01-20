@@ -2,12 +2,14 @@
 
 %table
   %tr
-    %th CSS Element
+    %th Element name
+    %th CSS tag
     %th Style
 
   - @elements.each do |element|
     %tr
       %td= element.name
+      %td= element.css_tag
       %td= element.style.blank? ? '- default -' : element.style.name
       %td= link_to 'Show', element
       %td= link_to 'Edit', edit_element_path(element)
