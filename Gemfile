@@ -9,8 +9,10 @@ gem 'rails', '4.0.2'
 # Use postgres as the database for Active Record
 gem 'pg'
 
-# Use unicorn
-gem 'unicorn'
+# Use thin
+group :production do
+  gem 'thin'
+end
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
