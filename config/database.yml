@@ -18,8 +18,8 @@ test:
 
 production:
   adapter: postgresql
-  database: bluetrain
+  database: d4mva3dk3ja4jp
   pool: 5
   timeout: 5000
-  username: bluetrain
-  password: bl00train
+  username: wazmsyvxnunlhu
+  password: 1JT7mNAtRqrmviFVdX2Q8Cknzl
