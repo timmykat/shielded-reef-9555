@@ -12,6 +12,7 @@ gem 'pg'
 # Use thin
 group :production do
   gem 'thin'
+  gem 'rails_serve_static_assets'
 end
 
 # Use SCSS for stylesheets
