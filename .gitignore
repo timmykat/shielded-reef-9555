@@ -15,9 +15,6 @@
 /log/*.log
 /tmp
 
-# Ignore public system files (paperclip)
-/public/system
-
 # Igmore project files
 *.bbprojectd
 .env
